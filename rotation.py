@@ -11,3 +11,9 @@ class Playground:
 
     def __init__(self, size: int, door: Coordinates) -> None:
         pass
+
+    def __str__(self) -> str:
+        pass
+
+    def add_stick(self, stick: Stick) -> None:
+        pass
