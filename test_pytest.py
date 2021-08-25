@@ -45,3 +45,23 @@ def test_playground3():
 #       2#
 ##########
 """
+
+def test_rotation1():
+    pg_test = rotation.Playground(8, (7,3))
+    pg_test.add_stick(rotation.Stick('0', [(1,6),(2,6)]))
+    pg_test.add_stick(rotation.Stick('1', [(3,1),(3,2)]))
+    pg_test.add_stick(rotation.Stick('2', [(3,3),(3,4),(3,5),(3,6)]))
+    pg_test.add_stick(rotation.Stick('3', [(4,1),(4,2)]))
+    pg_test.add_stick(rotation.Stick('4', [(4,6),(5,6),(6,6)]))
+    pg_test.add_stick(rotation.Stick('5', [(5,1),(5,2)]))
+    pg_test.add_stick(rotation.Stick('6', [(6,1),(6,2),(6,3)]))
+    assert pg_test.__str__() == """\
+########
+#     0#
+#     0#
+#112222#
+#33   4#
+#55   4#
+#666  4#
+### ####
+"""
