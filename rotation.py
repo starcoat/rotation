@@ -4,13 +4,15 @@ Coordinates = tuple[int, int]
 class Stick:
 
     def __init__(self, symbol: str, coords: list[Coordinates]) -> None:
-        pass
+        self.symbol = symbol
+        self.coords = coords
 
 
 class Playground:
 
     def __init__(self, size: int, door: Coordinates) -> None:
-        pass
+        self.size = size
+        self.door = door
 
     def __str__(self) -> str:
         pass
