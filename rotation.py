@@ -23,7 +23,12 @@ class Playground:
         self.canvas[door[0]][door[1]] = ' '
 
     def __str__(self) -> str:
-        pass
+        result = ''
+        for x in range(len(self.canvas)):
+            for y in range(len(self.canvas[x])):
+                result += self.canvas[x][y]
+            result += '\n'
+        return result
 
     def add_stick(self, stick: Stick) -> None:
         pass
