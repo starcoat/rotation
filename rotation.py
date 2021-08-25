@@ -31,4 +31,6 @@ class Playground:
         return result
 
     def add_stick(self, stick: Stick) -> None:
-        pass
+        self.sticks.append(stick)
+        for c in stick.coords:
+            self.canvas[c[0]][c[1]] = stick.symbol
