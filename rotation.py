@@ -36,4 +36,7 @@ class Playground:
             self.canvas[c[0]][c[1]] = stick.symbol
 
     def rotate(self, direction: str) -> None:
-        pass
+        if direction == 'CW':
+            self.rotation = (self.rotation + 90) % 360
+        elif direction == 'CCW':
+            self.rotation = (self.rotation + 270) % 360
