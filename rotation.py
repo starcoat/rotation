@@ -34,3 +34,6 @@ class Playground:
         self.sticks.append(stick)
         for c in stick.coords:
             self.canvas[c[0]][c[1]] = stick.symbol
+
+    def rotate(self, direction: str) -> None:
+        pass
