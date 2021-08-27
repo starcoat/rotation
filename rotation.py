@@ -58,3 +58,6 @@ class Playground:
 			self.rotation = (self.rotation + 90) % 360
 		elif direction == 'CCW':
 			self.rotation = (self.rotation + 270) % 360
+
+	def fall_down(self) -> None:
+		pass

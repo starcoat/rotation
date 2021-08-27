@@ -125,3 +125,16 @@ def test_rotate4():
 #444200#
 ########
 """
+
+fd_test1 = rotation.Playground(5, (0,1))
+fd_test1.add_stick(rotation.Stick('0', [(1,2)]))
+
+def test_falldown1():
+    fd_test1.fall_down()
+    assert fd_test1.__str__() == """\
+#####
+#   #
+#   #
+# 0 #
+#####
+"""
