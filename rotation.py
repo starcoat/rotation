@@ -60,4 +60,13 @@ class Playground:
 			self.rotation = (self.rotation + 270) % 360
 
 	def fall_down(self) -> None:
-		pass
+		done = False
+		while not done:
+			done = True
+			for s in range(len(self.sticks)):
+				for c in range(len(self.sticks[s].coords)):
+					if self.canvas[self.sticks[s].coords[c][0] + 1][self.sticks[s].coords[c][1]] == ' ':
+						self.canvas[self.sticks[s].coords[c][0]][self.sticks[s].coords[c][1]] = ' '
+						self.canvas[self.sticks[s].coords[c][0] + 1][self.sticks[s].coords[c][1]] = self.sticks[s].symbol
+						self.sticks[s].coords[c] = (self.sticks[s].coords[c][0] + 1, self.sticks[s].coords[c][1])
+						done = False
