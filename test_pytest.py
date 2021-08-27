@@ -85,6 +85,34 @@ def test_rotate1():
 ########
 """
 
+def test_rotate2():
+    pg_test2.rotate('CCW')
+    assert pg_test2.__str__() == """\
+#######
+#     #
+#     #
+#      
+# 0000#
+#     #
+#######
+"""
+
+def test_rotate3():
+    pg_test3.rotate('CCW')
+    pg_test3.rotate('CCW')
+    assert pg_test3.__str__() == """\
+##########
+#2       #
+#2       #
+#2       #
+#2       #
+#333333  #
+      1  #
+#     1  #
+#     100#
+##########
+"""
+
 def test_rotate4():
     pg_test4.rotate('CW')
     assert pg_test4.__str__() == """\
